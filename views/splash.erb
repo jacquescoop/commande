@@ -1,0 +1,15 @@
+<% @SousListe = []
+   @ListeCoop.each {|contenu| 
+     nom_coop = contenu['name']
+
+     if nom_coop.include? @koop.to_s
+       ##@SousListe << nom_coop
+       @SousListe << contenu
+     end } %>
+   
+<%= @SousListe.to_json %>
+
+
+
+
+
